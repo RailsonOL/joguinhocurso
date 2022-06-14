@@ -376,6 +376,7 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
 "Assets/Scripts/Dialog/DialogSettings.cs"
 "Assets/Scripts/Dialog/DialogueController.cs"
+"Assets/Scripts/Npc/Npc.cs"
 "Assets/Scripts/Npc/Npc_Dialog.cs"
 "Assets/Scripts/Player.cs"
 "Assets/Scripts/PlayerAnim.cs"

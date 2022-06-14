@@ -37,10 +37,11 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\Dialog\DialogueController.cs" />
+     <Compile Include="Assets\Scripts\Npc\Npc_Dialog.cs" />
      <Compile Include="Assets\Scripts\PlayerAnim.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
      <Compile Include="Assets\Scripts\Dialog\DialogSettings.cs" />
-     <Compile Include="Assets\Scripts\Npc\Npc_Dialog.cs" />
+     <Compile Include="Assets\Scripts\Npc\Npc.cs" />
     <Reference Include="UnityEngine">
         <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.4f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>
