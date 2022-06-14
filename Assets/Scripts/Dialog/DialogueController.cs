@@ -5,6 +5,15 @@ using UnityEngine.UI;
 
 public class DialogueController : MonoBehaviour
 {
+    [System.Serializable]
+    public enum idiom {
+        portuguese,
+        english,
+        spanish
+    }
+
+    public idiom language;
+
     [Header("Components")]
     public GameObject dialogueBox; // The dialogue box
     public Image profileSprite; // The profile sprite
@@ -13,20 +22,14 @@ public class DialogueController : MonoBehaviour
 
     [Header("Settings")]
     public float typingSpeed;
-
     private bool isShowing;
     private int index;
     private string[] sentences;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    public static DialogueController instance;
+
+    private void Awake() {
+        instance = this;
     }
 
     IEnumerator TypeSentence()
@@ -39,17 +42,38 @@ public class DialogueController : MonoBehaviour
     }
 
     public void NextSentence(){
-
+        if(speechText.text == sentences[index])
+        {
+            if(index < sentences.Length - 1)
+            {
+                index++;
+                speechText.text = "";
+                StartCoroutine(TypeSentence());
+            }
+            else
+            {
+                EndDialogue();
+            }
+        }
     }
 
-    public void Speech()
+    public void EndDialogue()
+    {
+        dialogueBox.SetActive(false);
+        isShowing = false;
+        index = 0;
+        speechText.text = "";
+        sentences = null;
+    }
+
+    public void Speech(string[] txt)
     {
         if(!isShowing)
         {
             dialogueBox.SetActive(true);
-            isShowing = true;
+            sentences = txt;
             StartCoroutine(TypeSentence());
+            isShowing = true;
         }
-
     }
 }
