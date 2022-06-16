@@ -9,8 +9,18 @@ public class Player : MonoBehaviour
     private float initialSpeed;
     private bool _isRunning;
     private bool _isRolling;
+    private bool _isCuting;
     private Rigidbody2D rig;
     private Vector2 _direction;
+
+    public bool isCuting{
+        get{
+            return _isCuting;
+        }
+        set{
+            _isCuting = value;
+        }
+    }
 
     public Vector2 direction
     {
@@ -54,9 +64,24 @@ public class Player : MonoBehaviour
         OnMove();
         OnRun();
         OnRolling();
+        OnCuting();
     }
 
     #region Moviment
+
+    void OnCuting()
+    {
+        if(Input.GetMouseButton(0))
+        {
+            _isCuting = true;
+            speed = 0;
+        }
+        else
+        {
+            _isCuting = false;
+            speed = initialSpeed;
+        }
+    }
     void OnInput()
     {
         _direction = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;

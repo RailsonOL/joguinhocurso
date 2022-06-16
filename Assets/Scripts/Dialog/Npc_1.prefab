@@ -25,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8497795866122166690}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0, y: 0.01, z: 0.20101416}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -179,6 +179,7 @@ GameObject:
   - component: {fileID: 8497795867348763823}
   - component: {fileID: 8497795867348763820}
   - component: {fileID: 8497795867348763822}
+  - component: {fileID: 1215172631}
   m_Layer: 0
   m_Name: Npc_1
   m_TagString: Untagged
@@ -239,4 +240,20 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 64
-  dialogue: {fileID: 0}
+  dialogue: {fileID: 11400000, guid: 29fa6bfc07cb2da478f1998ba875f678, type: 2}
+--- !u!114 &1215172631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8497795867348763821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1e123d9af41bdf408f12c6b8ac3cbf6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1.5
+  paths:
+  - {fileID: 0}
+  - {fileID: 0}

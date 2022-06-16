@@ -36,12 +36,15 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\Npc\Npc.cs" />
      <Compile Include="Assets\Scripts\Dialog\DialogueController.cs" />
      <Compile Include="Assets\Scripts\Npc\Npc_Dialog.cs" />
      <Compile Include="Assets\Scripts\PlayerAnim.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
      <Compile Include="Assets\Scripts\Dialog\DialogSettings.cs" />
-     <Compile Include="Assets\Scripts\Npc\Npc.cs" />
+     <Compile Include="Assets\Scripts\Craft\Tree.cs" />
+     <Compile Include="Assets\Scripts\Drops Items\Wood.cs" />
+     <Compile Include="Assets\Scripts\PlayerItems.cs" />
     <Reference Include="UnityEngine">
         <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.4f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>

@@ -50,6 +50,11 @@ public class PlayerAnim : MonoBehaviour
         {
             _spriteRenderer.flipX = true;
         }
+
+        if(player.isCuting)
+        {
+            anim.SetInteger("transition", 3);
+        }
     }
 
     void OnRun()
