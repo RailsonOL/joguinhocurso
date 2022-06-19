@@ -6,12 +6,14 @@ public class PlayerAnim : MonoBehaviour
 {
     private Player player;
     private Animator anim;
-    private SpriteRenderer _spriteRenderer;
+
+    private Casting cast;
     void Start()
     {
         player = GetComponent<Player>();
         anim = GetComponent<Animator>();
-        _spriteRenderer = GetComponent<SpriteRenderer>();
+
+        cast = FindObjectOfType<Casting>();
     }
 
     // Update is called once per frame
@@ -42,18 +44,23 @@ public class PlayerAnim : MonoBehaviour
             anim.SetInteger("transition", 0);
         }
 
-        if (player.direction.x > 0)
-        {
-            _spriteRenderer.flipX = false;
-        }
-        else if (player.direction.x < 0)
-        {
-            _spriteRenderer.flipX = true;
+        if(player.direction.x > 0){
+            transform.eulerAngles = new Vector2(0, 0);
+        }else if (player.direction.x < 0){
+            transform.eulerAngles = new Vector2(0, 180);
         }
 
         if(player.isCuting)
         {
             anim.SetInteger("transition", 3);
+        }
+
+        if(player.isDigging){
+            anim.SetInteger("transition", 4);
+        }
+
+        if(player.isWatering){
+            anim.SetInteger("transition", 5);
         }
     }
 
@@ -66,4 +73,14 @@ public class PlayerAnim : MonoBehaviour
     }
 
     #endregion
+
+    public void OnCastingStart(){
+        anim.SetTrigger("isCasting");
+        player.isPaused = true;
+    }
+
+    public void OnCastingEnded(){
+        cast.OnCasting();
+        player.isPaused = false;
+    }
 }
