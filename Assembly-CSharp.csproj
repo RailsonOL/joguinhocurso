@@ -38,18 +38,19 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\Farm\Water.cs" />
      <Compile Include="Assets\Scripts\Npc\Npc.cs" />
+     <Compile Include="Assets\Scripts\Farm\Casting.cs" />
      <Compile Include="Assets\Scripts\Drops Items\Wood.cs" />
      <Compile Include="Assets\Scripts\Dialog\DialogueController.cs" />
      <Compile Include="Assets\Scripts\Npc\Npc_Dialog.cs" />
+     <Compile Include="Assets\Scripts\HUD\HudController.cs" />
      <Compile Include="Assets\Scripts\PlayerAnim.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
      <Compile Include="Assets\Scripts\Farm\SlotFarm.cs" />
      <Compile Include="Assets\Scripts\Craft\Tree.cs" />
      <Compile Include="Assets\Scripts\Dialog\DialogSettings.cs" />
-     <Compile Include="Assets\Scripts\PlayerItems.cs" />
-     <Compile Include="Assets\Scripts\HUD\HudController.cs" />
-     <Compile Include="Assets\Scripts\Farm\Casting.cs" />
      <Compile Include="Assets\Scripts\Drops Items\Fish.cs" />
+     <Compile Include="Assets\Scripts\PlayerItems.cs" />
+     <Compile Include="Assets\Scripts\Buildings\House.cs" />
     <Reference Include="UnityEngine">
         <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.4f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>
