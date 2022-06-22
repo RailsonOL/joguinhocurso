@@ -41,6 +41,7 @@
      <Compile Include="Assets\Scripts\Farm\Casting.cs" />
      <Compile Include="Assets\Scripts\Drops Items\Wood.cs" />
      <Compile Include="Assets\Scripts\Dialog\DialogueController.cs" />
+     <Compile Include="Assets\Scripts\Buildings\House.cs" />
      <Compile Include="Assets\Scripts\Npc\Npc_Dialog.cs" />
      <Compile Include="Assets\Scripts\HUD\HudController.cs" />
      <Compile Include="Assets\Scripts\PlayerAnim.cs" />
@@ -50,7 +51,8 @@
      <Compile Include="Assets\Scripts\Dialog\DialogSettings.cs" />
      <Compile Include="Assets\Scripts\Drops Items\Fish.cs" />
      <Compile Include="Assets\Scripts\PlayerItems.cs" />
-     <Compile Include="Assets\Scripts\Buildings\House.cs" />
+     <Compile Include="Assets\Scripts\Enemy\Skeleton.cs" />
+     <Compile Include="Assets\Scripts\Enemy\AnimController.cs" />
     <Reference Include="UnityEngine">
         <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.4f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>
@@ -824,6 +826,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="NavMeshComponents.csproj">
+      <Project>{0f3ab29e-a9a5-aa61-8f2b-3f1fcfec1a2c}</Project>
+      <Name>NavMeshComponents</Name>
+    </ProjectReference>
+    <ProjectReference Include="NavMeshComponentsEditor.csproj">
+      <Project>{091c654d-e66f-ab9e-88a1-5b91970055f0}</Project>
+      <Name>NavMeshComponentsEditor</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
