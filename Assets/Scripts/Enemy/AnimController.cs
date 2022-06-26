@@ -9,9 +9,13 @@ public class AnimController : MonoBehaviour
     [SerializeField] private float atkRange;
     [SerializeField] private LayerMask playerLayer;
 
+    private PlayerAnim playerAnim;
+    private Skeleton skeleton;
     private void Start()
     {
         anim = GetComponent<Animator>();
+        playerAnim = FindObjectOfType<PlayerAnim>();
+        skeleton = GetComponent<Skeleton>();
     }
 
     public void PlayAnim(int value){
@@ -19,10 +23,27 @@ public class AnimController : MonoBehaviour
     }
 
     public void Attack(){
-        Collider2D hit = Physics2D.OverlapCircle(atkPoint.position, atkRange, playerLayer);
+        if(!skeleton.isDead){
+            Collider2D hit = Physics2D.OverlapCircle(atkPoint.position, atkRange, playerLayer);
 
-        if(hit != null){
-            
+            if(hit != null){
+                playerAnim.OnHit();
+            }
+        }
+    }
+
+    public void OnHit(){
+        if(skeleton.health <= 0){
+            skeleton.isDead = true;
+            anim.SetTrigger("death");
+
+            Destroy(skeleton.gameObject, 1f);
+        }else{
+            anim.SetTrigger("hit");
+
+            skeleton.health --;
+
+            skeleton.healthBar.fillAmount = skeleton.health / skeleton.totalHealth;
         }
     }
 

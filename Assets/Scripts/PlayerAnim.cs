@@ -4,10 +4,17 @@ using UnityEngine;
 
 public class PlayerAnim : MonoBehaviour
 {
+    [SerializeField] private Transform atkPoint;
+    [SerializeField] private float atkRange;
+    [SerializeField] private LayerMask enemyLayer;
+
     private Player player;
     private Animator anim;
-
     private Casting cast;
+
+    private bool isHitting;
+    private float recoveryTime = 1f;
+    private float timeCount;
     void Start()
     {
         player = GetComponent<Player>();
@@ -21,6 +28,14 @@ public class PlayerAnim : MonoBehaviour
     {
         OnMove();
         OnRun();
+
+        if(isHitting){
+            timeCount += Time.deltaTime;
+            if(timeCount >= recoveryTime){
+                isHitting = false;
+                timeCount = 0;
+            }
+        }
     }
 
     #region Movement
@@ -74,6 +89,22 @@ public class PlayerAnim : MonoBehaviour
 
     #endregion
 
+    #region Attack
+
+    public void OnAttack()
+    {
+        Collider2D hit = Physics2D.OverlapCircle(atkPoint.position, atkRange, enemyLayer);
+        if (hit != null)
+        {
+            hit.GetComponent<AnimController>().OnHit();
+        }
+    }
+
+    private void OnDrawGizmos() {
+        Gizmos.DrawWireSphere(atkPoint.position, atkRange);
+    }
+
+    #endregion
     public void OnCastingStart(){
         anim.SetTrigger("isCasting");
         player.isPaused = true;
@@ -92,5 +123,12 @@ public class PlayerAnim : MonoBehaviour
     public void OnHammeringEnded(){
         anim.SetBool("hammering", false);
         player.isPaused = false;
+    }
+
+    public void OnHit(){
+        if(!isHitting){
+            isHitting = true;
+            anim.SetTrigger("isHit");
+        }
     }
 }

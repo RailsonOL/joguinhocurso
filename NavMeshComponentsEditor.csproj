@@ -36,17 +36,17 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\NavMeshPlus-master\NavMeshComponents\Editor\NavMeshComponentsGUIUtility.cs" />
-     <Compile Include="Assets\NavMeshPlus-master\NavMeshComponents\Editor\NavMeshLinkEditor.cs" />
+     <Compile Include="Assets\NavMeshPlus-master\NavMeshComponents\Editor\NavMeshAssetManager2d.cs" />
+     <Compile Include="Assets\NavMeshPlus-master\NavMeshComponents\Editor\NavMeshCacheSources2dEditor.cs" />
+     <Compile Include="Assets\NavMeshPlus-master\NavMeshComponents\Editor\NavMeshSurfaceEditor.cs" />
      <Compile Include="Assets\NavMeshPlus-master\NavMeshComponents\Editor\NavMeshCollectSources2dEditor.cs" />
      <Compile Include="Assets\NavMeshPlus-master\NavMeshComponents\Editor\NavMeshModifierVolumeEditor.cs" />
-     <Compile Include="Assets\NavMeshPlus-master\NavMeshComponents\Editor\NavMeshModifierEditor.cs" />
      <Compile Include="Assets\NavMeshPlus-master\NavMeshComponents\Editor\NavMeshAssetManager.cs" />
-     <Compile Include="Assets\NavMeshPlus-master\NavMeshComponents\Editor\NavMeshSurfaceEditor.cs" />
-     <Compile Include="Assets\NavMeshPlus-master\NavMeshComponents\Editor\NavMeshAssetManager2d.cs" />
-     <Compile Include="Assets\NavMeshPlus-master\NavMeshComponents\Editor\NavMeshCollectRootSources2dEditor.cs" />
      <Compile Include="Assets\NavMeshPlus-master\NavMeshComponents\Editor\NavMeshSurfaceEditor2d.cs" />
-     <Compile Include="Assets\NavMeshPlus-master\NavMeshComponents\Editor\NavMeshCacheSources2dEditor.cs" />
+     <Compile Include="Assets\NavMeshPlus-master\NavMeshComponents\Editor\NavMeshModifierEditor.cs" />
+     <Compile Include="Assets\NavMeshPlus-master\NavMeshComponents\Editor\NavMeshCollectRootSources2dEditor.cs" />
+     <Compile Include="Assets\NavMeshPlus-master\NavMeshComponents\Editor\NavMeshComponentsGUIUtility.cs" />
+     <Compile Include="Assets\NavMeshPlus-master\NavMeshComponents\Editor\NavMeshLinkEditor.cs" />
      <None Include="Assets\NavMeshPlus-master\NavMeshComponents\Editor\NavMeshComponentsEditor.asmdef" />
     <Reference Include="UnityEngine">
         <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.4f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
@@ -729,11 +729,11 @@
     <Reference Include="UnityEngine.UI">
         <HintPath>F:\Unity Projects\JoguinhoCurso\Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.TestRunner">
-        <HintPath>F:\Unity Projects\JoguinhoCurso\Library\ScriptAssemblies\UnityEngine.TestRunner.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEditor.TestRunner">
         <HintPath>F:\Unity Projects\JoguinhoCurso\Library\ScriptAssemblies\UnityEditor.TestRunner.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TestRunner">
+        <HintPath>F:\Unity Projects\JoguinhoCurso\Library\ScriptAssemblies\UnityEngine.TestRunner.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

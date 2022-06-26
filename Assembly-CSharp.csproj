@@ -45,6 +45,7 @@
      <Compile Include="Assets\Scripts\Npc\Npc_Dialog.cs" />
      <Compile Include="Assets\Scripts\HUD\HudController.cs" />
      <Compile Include="Assets\Scripts\PlayerAnim.cs" />
+     <Compile Include="Assets\Scripts\Enemy\AnimController.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
      <Compile Include="Assets\Scripts\Farm\SlotFarm.cs" />
      <Compile Include="Assets\Scripts\Craft\Tree.cs" />
@@ -52,7 +53,6 @@
      <Compile Include="Assets\Scripts\Drops Items\Fish.cs" />
      <Compile Include="Assets\Scripts\PlayerItems.cs" />
      <Compile Include="Assets\Scripts\Enemy\Skeleton.cs" />
-     <Compile Include="Assets\Scripts\Enemy\AnimController.cs" />
     <Reference Include="UnityEngine">
         <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.4f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>
@@ -686,15 +686,6 @@
     <Reference Include="System.Xml.Serialization">
         <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.4f1\Editor\Data\NetStandard\compat\2.1.0\shims\netfx\System.Xml.Serialization.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.VisualScripting.Flow.Editor">
-        <HintPath>F:\Unity Projects\JoguinhoCurso\Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.2D.Tilemap.Extras">
-        <HintPath>F:\Unity Projects\JoguinhoCurso\Library\ScriptAssemblies\Unity.2D.Tilemap.Extras.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.2D.Animation.Editor">
-        <HintPath>F:\Unity Projects\JoguinhoCurso\Library\ScriptAssemblies\Unity.2D.Animation.Editor.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.InternalAPIEngineBridge.001">
         <HintPath>F:\Unity Projects\JoguinhoCurso\Library\ScriptAssemblies\Unity.InternalAPIEngineBridge.001.dll</HintPath>
     </Reference>
@@ -704,14 +695,59 @@
     <Reference Include="Unity.2D.PixelPerfect">
         <HintPath>F:\Unity Projects\JoguinhoCurso\Library\ScriptAssemblies\Unity.2D.PixelPerfect.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.2D.Tilemap.Editor">
-        <HintPath>F:\Unity Projects\JoguinhoCurso\Library\ScriptAssemblies\Unity.2D.Tilemap.Editor.dll</HintPath>
-    </Reference>
     <Reference Include="PsdPlugin">
         <HintPath>F:\Unity Projects\JoguinhoCurso\Library\ScriptAssemblies\PsdPlugin.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
         <HintPath>F:\Unity Projects\JoguinhoCurso\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.VisualScripting.State.Editor">
+        <HintPath>F:\Unity Projects\JoguinhoCurso\Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.2D.IK.Editor">
+        <HintPath>F:\Unity Projects\JoguinhoCurso\Library\ScriptAssemblies\Unity.2D.IK.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.2D.Path.Editor">
+        <HintPath>F:\Unity Projects\JoguinhoCurso\Library\ScriptAssemblies\Unity.2D.Path.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.VisualScripting.SettingsProvider.Editor">
+        <HintPath>F:\Unity Projects\JoguinhoCurso\Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.UI">
+        <HintPath>F:\Unity Projects\JoguinhoCurso\Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Rider.Editor">
+        <HintPath>F:\Unity Projects\JoguinhoCurso\Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+        <HintPath>F:\Unity Projects\JoguinhoCurso\Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.2D.IK.Runtime">
+        <HintPath>F:\Unity Projects\JoguinhoCurso\Library\ScriptAssemblies\Unity.2D.IK.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Cinemachine">
+        <HintPath>F:\Unity Projects\JoguinhoCurso\Library\ScriptAssemblies\Cinemachine.dll</HintPath>
+    </Reference>
+    <Reference Include="com.unity.cinemachine.editor">
+        <HintPath>F:\Unity Projects\JoguinhoCurso\Library\ScriptAssemblies\com.unity.cinemachine.editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Mathematics.Editor">
+        <HintPath>F:\Unity Projects\JoguinhoCurso\Library\ScriptAssemblies\Unity.Mathematics.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.2D.Common.Editor">
+        <HintPath>F:\Unity Projects\JoguinhoCurso\Library\ScriptAssemblies\Unity.2D.Common.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.VisualScripting.Flow.Editor">
+        <HintPath>F:\Unity Projects\JoguinhoCurso\Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.2D.Tilemap.Extras">
+        <HintPath>F:\Unity Projects\JoguinhoCurso\Library\ScriptAssemblies\Unity.2D.Tilemap.Extras.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.2D.Animation.Editor">
+        <HintPath>F:\Unity Projects\JoguinhoCurso\Library\ScriptAssemblies\Unity.2D.Animation.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.2D.Tilemap.Editor">
+        <HintPath>F:\Unity Projects\JoguinhoCurso\Library\ScriptAssemblies\Unity.2D.Tilemap.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualStudio.Editor">
         <HintPath>F:\Unity Projects\JoguinhoCurso\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
@@ -725,47 +761,26 @@
     <Reference Include="Unity.TextMeshPro">
         <HintPath>F:\Unity Projects\JoguinhoCurso\Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.VisualScripting.State.Editor">
-        <HintPath>F:\Unity Projects\JoguinhoCurso\Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.Burst.Editor">
         <HintPath>F:\Unity Projects\JoguinhoCurso\Library\ScriptAssemblies\Unity.Burst.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.2D.IK.Editor">
-        <HintPath>F:\Unity Projects\JoguinhoCurso\Library\ScriptAssemblies\Unity.2D.IK.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Sprite.Editor">
         <HintPath>F:\Unity Projects\JoguinhoCurso\Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.2D.Path.Editor">
-        <HintPath>F:\Unity Projects\JoguinhoCurso\Library\ScriptAssemblies\Unity.2D.Path.Editor.dll</HintPath>
+    <Reference Include="Unity.2D.Psdimporter.Editor">
+        <HintPath>F:\Unity Projects\JoguinhoCurso\Library\ScriptAssemblies\Unity.2D.Psdimporter.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.VisualScripting.SettingsProvider.Editor">
-        <HintPath>F:\Unity Projects\JoguinhoCurso\Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll</HintPath>
+    <Reference Include="Unity.InternalAPIEditorBridge.001">
+        <HintPath>F:\Unity Projects\JoguinhoCurso\Library\ScriptAssemblies\Unity.InternalAPIEditorBridge.001.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Flow">
         <HintPath>F:\Unity Projects\JoguinhoCurso\Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEditor.UI">
-        <HintPath>F:\Unity Projects\JoguinhoCurso\Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.PlasticSCM.Editor">
         <HintPath>F:\Unity Projects\JoguinhoCurso\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.Rider.Editor">
-        <HintPath>F:\Unity Projects\JoguinhoCurso\Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.2D.Psdimporter.Editor">
-        <HintPath>F:\Unity Projects\JoguinhoCurso\Library\ScriptAssemblies\Unity.2D.Psdimporter.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.UI">
-        <HintPath>F:\Unity Projects\JoguinhoCurso\Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.2D.Tilemap.Extras.Editor">
         <HintPath>F:\Unity Projects\JoguinhoCurso\Library\ScriptAssemblies\Unity.2D.Tilemap.Extras.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.InternalAPIEditorBridge.001">
-        <HintPath>F:\Unity Projects\JoguinhoCurso\Library\ScriptAssemblies\Unity.InternalAPIEditorBridge.001.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Services.Core">
         <HintPath>F:\Unity Projects\JoguinhoCurso\Library\ScriptAssemblies\Unity.Services.Core.dll</HintPath>
@@ -776,20 +791,11 @@
     <Reference Include="Unity.Mathematics">
         <HintPath>F:\Unity Projects\JoguinhoCurso\Library\ScriptAssemblies\Unity.Mathematics.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.2D.IK.Runtime">
-        <HintPath>F:\Unity Projects\JoguinhoCurso\Library\ScriptAssemblies\Unity.2D.IK.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="Cinemachine">
-        <HintPath>F:\Unity Projects\JoguinhoCurso\Library\ScriptAssemblies\Cinemachine.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.Services.Core.Analytics">
         <HintPath>F:\Unity Projects\JoguinhoCurso\Library\ScriptAssemblies\Unity.Services.Core.Analytics.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Burst">
         <HintPath>F:\Unity Projects\JoguinhoCurso\Library\ScriptAssemblies\Unity.Burst.dll</HintPath>
-    </Reference>
-    <Reference Include="com.unity.cinemachine.editor">
-        <HintPath>F:\Unity Projects\JoguinhoCurso\Library\ScriptAssemblies\com.unity.cinemachine.editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Shared.Editor">
         <HintPath>F:\Unity Projects\JoguinhoCurso\Library\ScriptAssemblies\Unity.VisualScripting.Shared.Editor.dll</HintPath>
@@ -806,17 +812,11 @@
     <Reference Include="Unity.Timeline.Editor">
         <HintPath>F:\Unity Projects\JoguinhoCurso\Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.Mathematics.Editor">
-        <HintPath>F:\Unity Projects\JoguinhoCurso\Library\ScriptAssemblies\Unity.Mathematics.Editor.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.2D.Common.Runtime">
         <HintPath>F:\Unity Projects\JoguinhoCurso\Library\ScriptAssemblies\Unity.2D.Common.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.SpriteShape.Editor">
         <HintPath>F:\Unity Projects\JoguinhoCurso\Library\ScriptAssemblies\Unity.2D.SpriteShape.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.2D.Common.Editor">
-        <HintPath>F:\Unity Projects\JoguinhoCurso\Library\ScriptAssemblies\Unity.2D.Common.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.SpriteShape.Runtime">
         <HintPath>F:\Unity Projects\JoguinhoCurso\Library\ScriptAssemblies\Unity.2D.SpriteShape.Runtime.dll</HintPath>
