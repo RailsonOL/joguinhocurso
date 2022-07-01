@@ -53,6 +53,9 @@
      <Compile Include="Assets\Scripts\Drops Items\Fish.cs" />
      <Compile Include="Assets\Scripts\PlayerItems.cs" />
      <Compile Include="Assets\Scripts\Enemy\Skeleton.cs" />
+     <Compile Include="Assets\Sounds\AudioManager.cs" />
+     <Compile Include="Assets\Sounds\AudioControl.cs" />
+     <Compile Include="Assets\Scripts\Sounds\ActorsFSX.cs" />
     <Reference Include="UnityEngine">
         <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.4f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>

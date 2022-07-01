@@ -393,6 +393,9 @@
 "Assets/Scripts/Player.cs"
 "Assets/Scripts/PlayerAnim.cs"
 "Assets/Scripts/PlayerItems.cs"
+"Assets/Scripts/Sounds/ActorsFSX.cs"
+"Assets/Sounds/AudioControl.cs"
+"Assets/Sounds/AudioManager.cs"
 -langversion:9.0
 
 /deterministic
